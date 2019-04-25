@@ -1,0 +1,58 @@
+index page com as opcoes do site (index page)
+
+- informacoes
+- biografia
+- grappling record
+- fight history
+- highlights (secalhar)
+
+
+index page
+
+pagina que mostra as opcoes do site, promo codes
+e paginas do bruno
+- prozis
+- instragram etc
+
+------------------------------------------------
+
+informacoes
+
+informacoes sobre o atleta
+um pouco de background
+
+------------------------------------------------
+
+biografia
+
+o trajeto do bruno no bjj
+
+------------------------------------------------
+
+grappling record 
+
+graficos circulares com as vitorias e as derrotas
+mostrar as percentagens nos graficos
+
+https://developers.google.com/chart/interactive/docs/gallery/piechart (grafico circular)
+
+------------------------------------------------
+
+fight history
+
+tabela com os combates e resultados 
+https://www.sitepoint.com/12-amazing-jquery-tables/ (tabelas)
+https://www.dynatable.com/ (tabela para os resultados)
+https://codepen.io/davizp/pen/xVGEwM (exemplo de tabela)
+http://jsfiddle.net/QhNwL/1/ (cores numa tabela)
+http://jsfiddle.net/bQfb6/2/ (mudar as cores das letras W - verde, L - vermelho)
+
+------------------------------------------------
+
+highlights (secalhar)
+
+videos de combates 
+
+
+
+
