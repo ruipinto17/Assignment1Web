@@ -13,11 +13,14 @@ informacoes
 informacoes sobre o atleta
 um pouco de background
 
+um slide de imagens com fotografias de competicao
+
 ------------------------------------------------
 
 biografia
 
 o trajeto do bruno no bjj
+efeito slide em dar scroll
 
 ------------------------------------------------
 

@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
 </head>
+
 <body>
-    <h3>Title xd</h3>
+    <nav>
+        <div class="logo">
+            <h4>André Galvão</h4>
+        </div>
 
+        <ul class="nav-links">
+            <li>
+                <a href="info.html">Info</a>
+            </li>
+            <li>
+                <a href="bio.html">Bio</a>
+            </li>
+            <li>
+                <a href="record.html">Record</a>
+            </li>
+            <li>
+                <a href="history.html">History</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
 
-    <h3>Informacoes</h3>
-    <h3>Biografia</h3>
-    <h3>Grappling record</h3>
-    <h3>Fight history</h3>
-    <h3>Highlights (secalhar)</h3>
-    
-    
+    </nav>
+    <script src="script.js"></script>
 </body>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!--Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <img src="images/galvao1.jpg" style="width: 500px" class="center">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="center"></div>
+        <img src="images/galvao1.jpg" style="width: 1300px" class="center">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/galvao1.jpg" style="width: 1300px" class="center">
+    </div>
+
+
+</div>
+<br>
+
+<script>
+    showSlides(slideIndex);
+</script>
+
+
 </html>
