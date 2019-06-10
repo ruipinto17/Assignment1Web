@@ -30,7 +30,7 @@ nav{
 .logo{
     color: rgb(226,226, 226);
     text-transform: uppercase;
-    letter-spacing: 5px; /*spacing between letters*/
+    letter-spacing: 5px; 
     font-size: 20px;
 }
 
@@ -42,6 +42,15 @@ nav{
 
 .nav-links li{
     list-style: none;
+}
+
+.logo h4 a
+{
+    color: rgb(226,226, 226);
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .nav-links a{
