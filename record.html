@@ -11,61 +11,90 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <h4><a href="index.html">André Galvão</a></h4>
-        </div>
+  <nav>
+    <div class="logo">
+      <h4><a href="index.html">André Galvão</a></h4>
+    </div>
 
-        <ul class="nav-links">
-            <li>
-                <a href="info.html">Info</a>
-            </li>
-            <li>
-                <a href="bio.html">Bio</a>
-            </li>
-            <li>
-                <a href="record.html">Record</a>
-            </li>
-            <li>
-                <a href="history.html">History</a>
-            </li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+    <ul class="nav-links">
+      <li>
+        <a href="info.html">Bio</a>
+      </li>
+      <li>
+        <a href="bio.html">Info</a>
+      </li>
+      <li>
+        <a href="record.html">Record</a>
+      </li>
+      <li>
+        <a href="history.html">History</a>
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
 
-    </nav>
-    <script src="script.js"></script>
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+  </nav>
+  <script src="script.js"></script>
+  <div id="piechart_3d"></div>
 </body>
 
 
-<div class="testxd">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
 
-        var options =
-        {
-          title: 'My Daily Activities',
-          is3D: true,
-        };
+<div class="piechart" id="piechart_3d" style="width: 600px; height: 350px; margin: auto;"></div>
+<br>
+<div class="piechart" id="piechart_3d_2" style="width: 600px; height: 350px; margin: auto;"></div>
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-      }
-    </script>
-</div>
+
+
+
+
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Work', 11],
+        ['Eat', 2],
+        ['Commute', 2],
+        ['Watch TV', 2],
+        ['Sleep', 7]
+      ]);
+
+      var options =
+      {
+        width: 900,
+        height: 500,
+        title: 'My Daily Activities',
+        is3D: true,
+
+        //style="width: 900px; height: 500px; align-items: center; margin-left: auto; margin-right: auto; padding-top: 10px; background-color: #003366"
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+      chart.draw(data, options);
+    }
+  </script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com.charts/loader.js"></script>
+<script type="text/javascript"></script>
+<div class="col">
+    <h3>My asdasdasdas</h3>
+    <div class="ne-nutrition-distribution">
+      <div id="ne-food-chart" class="ne-nutrition-distribution__chart"></div>
+    </div>
+    <h3>More Stuff Bellow</h3>
+  </div>
+  
+
+</html>
+
+
 </html>

@@ -12,11 +12,31 @@ body
 }
 
 .slideshow-container{
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-right: 20PX;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+.textOverImage{
+    padding-top: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: 'Noto Sans HK', sans-serif;
+}
+
+.textOverImage:hover{
+    background-size:110%;
+}
+
+.piechart_3d{
+    background-color: red;
+    align-content: center;
+    align-items: center;
 }
 
 nav{
@@ -74,6 +94,49 @@ nav{
     transition: all  0.3s ease;
 }
 
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+section {
+    width: 80%;
+    height: 910px;
+    background: white;
+    margin: auto;
+    padding: 10px;
+}
+
+div#one {
+    width: 50%;
+    height: 450px;
+    background: #2b77f2;
+    float: left;
+}
+div#two {
+    margin-left: 50%;
+    height: 450px;
+    background: #003366;
+    color: white;
+}
+div#three {
+    width: 50%;
+    height: 440px;
+    background: #003366;
+    float: left;
+}
+div#four {
+    margin-left: 50%;
+    height: 440px;
+    background: #2b77f2;
+}
 
 @media screen and (max-width: 1024px){
     .nav-links{       
@@ -81,12 +144,24 @@ nav{
     }
 }
 
-@media screen and (max-width:768px){
-    body{
+@media screen and (max-width:768px){     
+    
+    .wraparound{ 
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;       
+        margin-left: 0px;
+    }
+
+    .container{
+        margin-left: 0%;
+    }
+
+    .body{
         overflow-x: hidden;
     }
 
-    .slideshow-container{
+    .slideshow-container{             
         display: none;
     }
     .nav-links{
@@ -100,7 +175,7 @@ nav{
         align-items: center;
         width: 50%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.3s ease-in;
     }
     .nav-links li{
         opacity: 0;
@@ -127,97 +202,6 @@ nav{
     }
 }
 
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-
-.toggle .line2{
-    opacity: 0;
-}
-
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);
-}
-
-/*tutorial begin*/
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  max-height: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -227,14 +211,153 @@ nav{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .2} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .2} 
   to {opacity: 1}
 }
-/*tutorial end*/
 
+
+
+a{text-decoration:none;}
+/*Add the following compatibility code for IE as you can't animate background-size in IE*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+	.textOverImage{background-size:cover!important;}
+}
+
+
+
+.wraparound{
+    width: 70%;
+    height: auto;
+    background: #003366;    
+    padding-top: 10px;
+    margin-left: 260px;
+
+    /*flexbox style*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background: yellow;
+    margin: 10px;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+.textOverImage{   
+    position:relative;
+    width:300px; /*700px both*/
+    height:300px;
+    display: inline-block;
+    margin:4px;
+    background-size:112%;
+    background-position:center;
+    transition:0.5s;
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:0 0 4px #000;
+  }
+  
+  .textOverImage:hover{    
+    background-size:117%;
+  }
+  
+.textOverImage:before{
+  position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    transform:translateY(100%);
+    background-color:rgba(0,0,0,0.3);
+    color:#fff;
+    padding:0 8px;
+    content:attr(data-title);
+    transition:0.5s 0.1s;
+    color:#fff;
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+  .textOverImage:after{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color:#fff;
+    padding:8px;
+    content:attr(data-text);
+    transition:0.5s;
+    padding-top:0px;
+    margin-top:8px;
+    transform:translateY(100%);
+    opacity:0;
+  }
+  
+  .textOverImage:hover:after{
+    transform:translateY(0);
+    transition:0.5s 0.1s;
+    opacity:1;
+  }
+.textOverImage:hover:before{
+    transform:translateY(0);
+    padding:8px;
+    background-color:rgba(0,0,0,0.6);
+    transition:0.5s;
+}
+
+/*demo*/
+.col {
+    width:30%;
+    margin:10% auto;
+}
+.ne-nutrition-distribution {
+    border:1px solid gray;
+    position: relative;
+    padding-bottom: 80%;
+    height: 0;
+    overflow:hidden;
+}
+.ne-nutrition-distribution__chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+}
+/*demo end*/
+
+
+/*table*/
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  #customers td, #customers th {
+    background-color: white;
+    border: 1px solid white;
+    padding: 8px;
+  }    
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
 
