@@ -49,17 +49,15 @@ function showSlides() {
 }
 
 //demo
-google.charts.load("visualization", "1", {
-    packages: ["corechart"]
-});
-google.charts.setOnLoadCallback(initChart);
+google.charts.load("visualization", "1", { packages: ["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
 
 $(window).on("throttledresize", function (event) {
-    initChart();
+    drawChart();
   
 });
 
-function initChart() {
+function drawChart() {
     var options = {
       pieHole: 0.4,
 	    legend:{position: 'bottom'},
@@ -88,4 +86,33 @@ function drawChart(data, options) {
     var chart = new google.visualization.PieChart(document.getElementById('ne-food-chart'));
     chart.draw(data, options);
 }
+
+window.onscroll = function()
+{
+    //call the function when the user scrolls
+    scrollFunction();
+}
+
+//when the user scrolls down (20px) from the top, the button is showed
+function scrollFunction()
+{
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+    {
+        document.getElementById("btn").style.display = "right";
+    }
+    else
+    {
+         document.getElementById("btn").style.display = "none";
+    }
+}
+
+//scroll to the top when user presses the button
+function topFunction()
+{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+
 
