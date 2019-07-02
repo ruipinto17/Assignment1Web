@@ -55,3 +55,7 @@ Like it was mentioned previously, most of the testing was made in google chrome,
 My design choices, were pretty simple, the colors basically represent the team represents and the display of the website follows a simple design that aims to show the data in a concise way, I took the idea from the navigation bar, Andre's website.
 
 It is important to note, that I followed various tutorials and did a big amount of research in some of the effects that were used on the website, per example: the navigation bar I took the idea from an online tutorial which I later customized for my own website, the carousel of pictures I took the idea from (https://www.w3schools.com) and the text effect over the images was also a tutorial found online, however all of these were very customized to match the dynamic of the website and my own taste.
+
+### Link to the repository on github
+
+(https://github.com/ruipinto17/Assignment1Web)
